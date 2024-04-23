@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    
+
+    <script>
+        function findMissingNumber(arr) {
+            const firstNumber = arr[0];
+    const lastNumber = arr[arr.length - 1];
+    const n = lastNumber - firstNumber + 1;  
+    const expectedSum = ((n + 1) / 2) * (firstNumber + lastNumber);
+ 
+    let actualSum = 0;
+    for (let number of arr) {
+        actualSum += number;
+    }
+ 
+    const missingNumber = expectedSum - actualSum;
+
+    return missingNumber;
+}
+ 
+const series = [11, 12, 14, 15, 16,17, 18, 19, 20];
+const missing = findMissingNumber(series);
+console.log("Missing Number:", missing);
+
+    </script>
+</body>
+</html>
